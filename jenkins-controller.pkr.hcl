@@ -1,6 +1,6 @@
 variable "ami_id" {
   type    = string
-  default = "ami-0735c191cf914754d"
+  default = "ami-0735c191cf914754d" # Change this
 }
 
 variable "efs_mount_point" {
@@ -15,8 +15,8 @@ locals {
 source "amazon-ebs" "jenkins" {
   ami_name      = "${local.app_name}"
   instance_type = "t2.micro"
-  region        = "us-west-2"
-  availability_zone = "us-west-2a"
+  region        = "us-west-2" # Change this
+  availability_zone = "us-west-2a" # Change this
   source_ami    = "${var.ami_id}"
   ssh_username  = "ubuntu"
   tags = {
