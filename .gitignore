@@ -3,7 +3,3 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
-fs-09904c280bafc40bc.efs.ap-south-1.amazonaws.com
-
-packer build -var "efs_mount_point=fs-09904c280bafc40bc.efs.ap-south-1.amazonaws.com" jenkins-controller.pkr.hcl
