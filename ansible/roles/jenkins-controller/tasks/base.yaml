@@ -2,7 +2,13 @@
 - name: Update apt cache
   apt:
     update_cache: yes
-    
+    fix_broken: yes
+
+- name: Update and upgrade the system
+  apt:
+    update_cache: yes
+    upgrade: safe
+
 - name: Install Python 3
   apt:
     name: python3
@@ -25,6 +31,33 @@
     name: awscli
     state: latest
     executable: pip3
+
+# Required packages for java17
+- name: Install dependencies
+  apt:
+    name:
+      [
+        "libgtk2.0-0",
+        "libxrandr2",
+        "libxinerama1",
+        "libgl1",
+        "libharfbuzz0b",
+        "libgif7",
+        "libjpeg8",
+        "libxi6",
+        "libxrender1",
+        "libxtst6",
+        "libatk-wrapper-java-jni",
+        "fonts-dejavu-extra",
+        "ca-certificates-java",
+        "java-common",
+        "libcups2",
+        "liblcms2-2",
+        "libfontconfig1",
+        "libasound2",
+        "libpcsclite1",
+      ]
+    state: present
 
 - name: Install Java JDK 17
   apt:
