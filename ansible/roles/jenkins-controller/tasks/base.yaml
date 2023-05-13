@@ -2,7 +2,6 @@
 - name: Update apt cache
   apt:
     update_cache: yes
-    fix_broken: yes
 
 - name: Update and upgrade the system
   apt:
@@ -60,6 +59,7 @@
     state: present
 
 - name: Install Java JDK 17
+  become: true
   apt:
     name: openjdk-17-jdk
     state: present
