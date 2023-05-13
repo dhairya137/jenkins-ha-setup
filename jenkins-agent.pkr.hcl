@@ -1,6 +1,6 @@
 variable "ami_id" {
   type    = string
-  default = "ami-0735c191cf914754d" # Change this
+  default = "ami-02eb7a4783e7e9317" # Change this
 }
 
 variable "public_key_path" {
@@ -15,8 +15,8 @@ locals {
 source "amazon-ebs" "jenkins" {
   ami_name      = "${local.app_name}"
   instance_type = "t2.micro"
-  region        = "us-west-2" #Change this
-  availability_zone = "us-west-2a" #Change this
+  region        = "ap-south-1" #Change this
+  availability_zone = "ap-south-1a" #Change this
   source_ami    = "${var.ami_id}"
   ssh_username  = "ubuntu"
   iam_instance_profile = "jenkins-instance-profile"

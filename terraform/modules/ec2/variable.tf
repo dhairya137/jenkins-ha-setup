@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-south-1"
 }
 
 variable "instance_name" {
@@ -9,7 +9,7 @@ variable "instance_name" {
 
 variable "ami_id" {
   type = string
-  default = "ami-0735c191cf914754d"
+  default = "ami-02eb7a4783e7e9317"
 }
 
 variable "instance_type" {
@@ -19,12 +19,12 @@ variable "instance_type" {
 
 variable "key_name" {
   type = string
-  default = "techiescamp"
+  default = "linux-keypair"
 }
 
 variable "security_group_ids" {
   type    = list(string)
-  default = ["sg-01ce819e8d65269f0"]
+  default = ["sg-0eb547ef9df0d9b56"]
 }
 
 variable "instance_count" {
@@ -34,5 +34,5 @@ variable "instance_count" {
 
 variable "subnet_ids" {
   type    = list(string)
-  default = ["subnet-058a7514ba8adbb07", "subnet-0dbcd1ac168414927", "subnet-032f5077729435858"]
+  default = ["subnet-0b251f7913ce4e341", "subnet-01cac6aaaaa1db8eb", "subnet-0a8eb5f14e4ce2f84"]
 }

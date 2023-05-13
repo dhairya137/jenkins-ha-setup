@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2" # Change this if you wnat to do it in different region
+  region = "ap-south-1" # Change this if you wnat to do it in different region
 }
 
 module "jenkins_iam" {
